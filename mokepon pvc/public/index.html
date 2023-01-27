@@ -1,0 +1,89 @@
+<!DOCTYPE HTML> 
+    <head> 
+        <meta charset="UTF8">
+        <tile> </tile>
+        <link rel="stylesheet" href="./styles.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+        <body>
+            <h1 class="title"> MOKEPON!</h1>
+        <section id= "seleccionar_mascota">
+
+            <h2 class = "subtitle"> Elige tu mascota </h2>
+
+            <div id= "contenedorTarjetas" class="tarjeta">
+   
+            </div>
+
+             <button id ="boton-mascota">siguiente</button>
+        </section>
+        
+        <section id= "ver-mapa">
+            <h2 class= "map-title">Recorre el pueblo con tu mokepón</h2>
+            <canvas id= "mapa" height="440" width="700"></canvas>
+             
+                <button
+                ontouchend="detenerMovimiento()"
+                onpointerup="detenerMovimiento()" 
+                onpointerdown="moverArriba()"
+                ontouchstart="moverArriba()">
+                ⬆</button>
+            <div>
+                <button
+                onpointerup="detenerMovimiento()"
+                ontouchend="detenerMovimiento()"
+                onpointerdown="moverIzquierda()"
+                ontouchstart="moverIzquierda">
+                ⬅</button>
+                
+                <button
+                ontouchend="detenerMovimiento()"
+                onpointerup="detenerMovimiento()"
+                onpointerdown="moverAbajo()"
+                ontouchstart="moverAbajo()">
+                ⬇</button>
+                
+                <button
+                onpointerup="detenerMovimiento()"
+                ontouchend="detenerMovimiento()"
+                onpointerdown="moverDerecha()"
+                ontouchstart="moverDerecha()">
+                ➡</button>
+               
+            </div>
+
+        </section>
+
+
+
+        <section   id="Seleccionar_ataque">
+            <h2 class = "subtitle"> Elige tu ataque </h2> 
+                <div id= "contenedor-ataques"> 
+    
+                </div>
+                
+                <div id= "mensajes">
+                    <p id="resultado">Mucha suerte</p>
+        
+
+                    <section id= "reiniciar">
+                        <button id="boton-reiniciar">Reiniciar</button> 
+                    </section>
+                </div>
+
+                <div class="tarjeta-ataques">
+                    <div>
+                        <p id="vidas-jugador">0</p>
+                        <p id="mascota-jugador"> </p>
+                        <div id="ataque-jugador"></div>
+                    </div>
+                    <div>
+                        <p id="vidas-enemigo">0</p>
+                        <p id="mascota-enemigo"></p>
+                        <div id="ataque-enemigo"></div>
+                </div>  
+             </section>       
+             <script src="./js/mokeponoffline.js"></script>        
+        </body>
+      
+</DOCTYPE>
